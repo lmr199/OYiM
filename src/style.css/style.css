@@ -1,0 +1,1573 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+:root {
+    --cor-primaria: #FF6B00;
+    --cor-secundaria: #8c4013;
+    --cor-fundo-destaque: #FFEDD6;
+    --cor-titulo: #8c4013;
+    --cor-card-fundo: #FFFFFF;
+    --cor-btn-laranja: #FF6B00;
+    --cor-fundo-escuro: #1A232E;
+    --cor-texto-claro: #F8F8F8;
+    --cor-card-escuro: #313A49;
+    --cor-destaque: #28a745;
+}
+
+body html {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: var(--cor-fundo-destaque);
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--cor-secundaria);
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.subtitulo-secao {
+    display: inline-block;
+    color: var(--cor-secundaria);
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.divisor-projetos {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 60px 0 40px 0;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    z-index: 16;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.nav-scrolled {
+    background-color: #FF6B00;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    width: 100vw;
+    height: 60px;
+}
+
+.logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-lateral {
+    position: absolute;
+    left: 50px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0px;
+    border-radius: 8px;
+    top: -10px;
+}
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0px;
+    ;
+}
+
+.logo-lateral img {
+    height: 70px;
+}
+
+.oyim-tag {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    text-align: left;
+}
+
+.missao-tag {
+    font-size: 0.8em;
+    color: white;
+}
+
+.nav-principal ul {
+    left: 11px;
+    top: 0px;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-principal ul li a {
+    font-weight: bold;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.nav-principal ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-fundo-destaque);
+    transition: width 0.5s ease;
+    cursor: pointer;
+}
+
+.nav-principal ul li a:hover {
+    color: var(--cor-fundo-destaque);
+}
+
+.nav-principal ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+
+.btn-candidato {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background-color: var(--cor-btn-laranja);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-candidato:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.hero-novo {
+    padding: 400px 20px 220px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: url('/src/images/Fundo.jpg') no-repeat center center/cover;
+}
+
+.hero-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.75;
+    z-index: 1;
+}
+
+.hero-titulo,
+.hero-conteudo-flutuante {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-titulo {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+}
+
+.hero-titulo h1 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 4em;
+    margin: 0;
+    font-weight: 900;
+}
+
+.apso-destaque {
+    color: #ffd2a0;
+    font-size: 34px;
+}
+
+.slogan-principal {
+    font-size: 1.5em;
+    margin-top: 5px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.hero-conteudo-flutuante {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+    z-index: 15;
+}
+
+
+.imagem-missao {
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.imagem-missao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 33% 67%;
+}
+
+
+.card-destaque {
+    width: 350px;
+    height: 250px;
+    box-sizing: border-box;
+    background-color: var(--cor-card-fundo);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 10;
+}
+
+.icone-coracao {
+    color: var(--cor-btn-laranja);
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card-destaque p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 25px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.btn-card {
+    display: inline-block;
+    background-color: var(--cor-btn-laranja);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-family: "League Spartan", sans-serif;
+}
+
+.btn-card:hover {
+    background-color: var(--cor-secundaria);
+}
+
+#o-projeto {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#o-projeto {
+    background-color: black;
+}
+
+#o-projeto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/src/images/Fundooyimapso.jpg') center center/cover no-repeat;
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#o-projeto>* {
+    position: relative;
+    z-index: 1;
+}
+
+.subtitulo-secao {
+    color: white;
+}
+
+#o-projeto h2 {
+    font-size: 2.2em;
+    margin: 5px 0 10px 0;
+    color: var(--cor-fundo-destaque);
+}
+
+.slogan-oyim {
+    font-size: 1.2em;
+    color: var(--cor-primaria);
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.container-oyim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.oyim-texto-beneficios {
+    flex: 1;
+    padding-right: 60px;
+    margin-left: 20px;
+}
+
+.oyim-texto-beneficios h3 {
+    margin-left: 30%;
+    width: 200px;
+    align-items: center;
+    background-color: rgba(255, 107, 0, 0.8);
+    color: white;
+    padding: 8px 0px;
+    border-radius: 10px;
+}
+
+.oyim-texto-beneficios p {
+    color: white;
+    font-weight: bold;
+}
+
+.oyim-estatisticas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.estatisticas-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.top-row .card-estatistica {
+    margin: 0 10px;
+}
+
+.bottom-row .card-estatistica {
+    margin: 0 30px;
+}
+
+
+.lista-beneficios {
+    margin-left: 1%;
+    color: white;
+    font-weight: bold;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-beneficios li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.fa-regular {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #69fa8b;
+}
+
+
+.card-estatistica {
+    width: 130px;
+    background-color: #FFFFFF;
+    padding: 15px 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.symbol {
+    font-size: 2.5em;
+    color: #FF6B00;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.symbol.equal {
+    font-size: 3em;
+    margin: 0 0 0px 0;
+    display: block;
+    color: white;
+}
+
+.card-estatistica h3 {
+    font-size: 2em;
+    margin: 0 0 5px 0;
+    color: var(--cor-primaria);
+}
+
+.card-estatistica p {
+    font-weight: bold;
+}
+
+.paises-card h3 {
+    color: var(--cor-btn-laranja);
+}
+
+.missionarios-card h3 {
+    color: var(--cor-btn-laranja);
+}
+
+.vidas-card h3 {
+    color: var(--cor-btn-laranja);
+}
+
+.resultados-card h3 {
+    color: white;
+}
+
+.resultados-card {
+    background-color: #FF6B00;
+}
+
+.resultados-card p {
+    font-weight: bold;
+    color: var(--cor-fundo-destaque);
+}
+
+.secao-images {
+    padding: 100px;
+}
+
+.secao-images .subtitulo-secao {
+    color: #FF6B00;
+    padding: -10px;
+}
+
+.container-locais {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-local {
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.carousel-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-images::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    flex: 0 0 100%;
+    scroll-snap-align: initial;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+
+.info-local {
+    background-color: #8B4513;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+.nome-local {
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+.info-local button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    transition: transform 0.2s;
+}
+
+.info-local button:hover {
+    transform: scale(1.2);
+}
+
+
+.carousel .prev {
+    left: 5px;
+}
+
+.carousel .next {
+    right: 5px;
+}
+
+.nome-local {
+    background-color: var(--cor-titulo);
+    color: white;
+    padding: 15px 10px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+#equipe {
+    background-color: var(--cor-fundo-destaque);
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.equipe-transformacao .equipe {
+    display: inline-block;
+    color: var(--cor-btn-laranja);
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+
+.pastor-destaque {
+    max-width: 600px;
+    margin: 0 auto 80px auto;
+    padding: 10px;
+    background-color: var(--cor-card-fundo);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pastor-destaque img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--cor-primaria);
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: -70px;
+}
+
+.pastor-destaque .subtitulo-secao {
+    position: relative;
+    margin-inline-start: 150px;
+    bottom: 70px;
+    margin-bottom: 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: none;
+    font-size: 35px;
+    color: #FF6B00;
+}
+
+.pastor-destaque h3 {
+    color: var(--cor-titulo);
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.pastor-destaque p {
+    font-style: normal;
+    color: #666;
+    line-height: 1.5;
+}
+
+.subtitulo-secao {
+    color: #FF6B00;
+}
+
+.intro-missionarios {
+    max-width: 700px;
+    margin: 20px auto 50px auto;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.missionarios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-missionario {
+    width: 350px;
+    background-color: var(--cor-card-fundo);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card-missionario:hover {
+    transform: translateY(-8px);
+}
+
+.missionario-header {
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    height: 120px;
+}
+
+.missionario-foto-vertical {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid white;
+    position: absolute;
+    bottom: -60px;
+}
+
+.missionario-info-basica {
+    position: absolute;
+    z-index: 1;
+    top: 230px;
+    text-align: center;
+}
+
+.missionario-info-basica h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #FF6B00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.missionario-info-basica .idade-local {
+    font-size: 0.9em;
+    opacity: 0.9;
+    margin: 5px 0;
+    color: var(--cor-titulo);
+}
+
+.missionario-info-basica .foco-missao {
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgba(255, 107, 0, 0.6);
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.missionario-descricao {
+    padding: 200px 20px 20px 20px;
+    color: #444;
+}
+
+.missionario-descricao p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.destaques-missionario {
+    margin-top: 20px;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.missionario-descricao ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+.missionario-descricao ul li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.fa-check {
+    color: #FF6B00;
+}
+
+#requisitos {
+    background-color: var(--cor-card-fundo);
+    padding: 60px;
+}
+
+#requisitos ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+#requisitos li {
+    background: var(--cor-fundo-destaque);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--cor-primaria);
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+
+
+.contato-dark-bg {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-claro);
+    padding-bottom: 20px;
+}
+
+.contato-dark-bg h2 {
+    color: var(--cor-texto-claro);
+    margin-bottom: 5px;
+}
+
+.contato-dark-bg .contato-subtitulo {
+    color: var(--cor-primaria);
+    margin-top: 20px;
+}
+
+.contato-intro {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.contato-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.card-contato {
+    width: 250px;
+    background-color: var(--cor-card-escuro);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icone-contato {
+    font-size: 2em;
+    color: var(--cor-primaria);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tipo-contato {
+    font-weight: bold;
+    color: var(--cor-texto-claro);
+    margin: 5px 0;
+}
+
+.valor-contato {
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+/* Ação Rápida */
+.contato-acao-rapida {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--cor-card-escuro);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contato-acao-rapida h3 {
+    color: var(--cor-texto-claro);
+    margin-top: 0;
+}
+
+.botoes-acao {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-acao-rapida {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.btn-whatsapp {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+.btn-email {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+.footer-dark-bg {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-claro);
+    padding: 40px 20px 0 20px;
+    text-align: left;
+}
+
+.footer-principal {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    color: var(--cor-texto-claro);
+    margin-top: 0;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col a {
+    color: #cccccc;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.footer-col a:hover {
+    color: var(--cor-primaria);
+}
+
+.footer-logo .oyim-tag {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--cor-primaria);
+}
+
+.footer-logo .missao-tag {
+    font-size: 0.9em;
+    color: var(--cor-texto-claro);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--cor-card-escuro);
+    padding: 15px 0;
+    font-size: 0.8em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-cta {
+    background-color: #311c13;
+    padding: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: none;
+    width: 100%;
+}
+
+.cta-conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-conteudo h4 {
+    color: var(--cor-texto-claro);
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.btn-cta-agora {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+@media (max-width: 1200px) {
+    .card-missionario {
+        width: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-novo {
+        padding-bottom: 200px;
+    }
+
+    .hero-titulo h1 {
+        font-size: 3em;
+    }
+
+    .logo-container {
+        flex-direction: column;
+    }
+
+    .logo-lateral,
+    .btn-candidato {
+        position: static;
+        margin: 10px auto;
+    }
+
+    .btn-candidato {
+        margin-top: 10px;
+    }
+
+    .hero-conteudo-flutuante {
+        flex-direction: column;
+        align-items: center;
+        bottom: -150px;
+        width: 90%;
+        max-width: 400px;
+        transform: translateX(-50%);
+    }
+
+    .imagem-missao,
+    .card-destaque {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #o-projeto {
+        padding-top: 60px;
+    }
+
+    .container-oyim {
+        flex-direction: column;
+    }
+
+    .oyim-texto-beneficios {
+        padding-right: 0;
+        text-align: center;
+        flex: auto;
+    }
+
+    .lista-beneficios {
+        text-align: left;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    .oyim-estatisticas {
+        justify-content: space-around;
+    }
+
+    .card-estatistica {
+        width: 40%;
+    }
+
+    .container-locais {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .missionarios-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-missionario {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .footer-principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+
+    .hero-titulo h1 {
+        font-size: 2.5em;
+    }
+
+    .card-estatistica {
+        width: 100%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--cor-fundo-destaque);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#FFEDD6, #ffd2a0, #FF6B00);
+    border-radius: 10px;
+
+}
+
+@media (max-width: 1200px) {
+    .container-oyim {
+        flex-direction: column;
+        gap: 40px;
+        align-items: stretch;
+    }
+
+    .oyim-texto-beneficios {
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .secao-images {
+        padding: 40px 10px;
+    }
+
+    .container-locais {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-local {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-novo {
+        padding: 180px 10px 80px 10px;
+    }
+
+    .hero-titulo {
+        top: 160px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90vw;
+    }
+
+    .hero-titulo h1 {
+        font-size: 2.2em;
+    }
+
+    .slogan-principal {
+        font-size: 1.1em;
+    }
+
+    .hero-conteudo-flutuante {
+        flex-direction: column;
+        gap: 20px;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 30px;
+        transform: none;
+        left: 0;
+        bottom: 0;
+    }
+
+    .imagem-missao,
+    .card-destaque {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .card-destaque {
+        padding: 18px;
+    }
+
+    .container-locais {
+        grid-template-columns: 1fr;
+    }
+
+    .card-local {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Telas até 700px */
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 10px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-titulo {
+        top: 160px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90vw;
+    }
+
+    .logo-lateral {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        position: static;
+    }
+
+    .logo-lateral img {
+        height: 100px;
+        margin-top: 20px;
+        margin-left: -15px;
+        position: static;
+    }
+
+    .nav-principal ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .btn-candidato {
+        position: static;
+        margin: 20px 0 0 16px;
+        width: 90vw;
+        text-align: left;
+        display: block;
+    }
+
+    .secao-images {
+        padding: 20px 5px;
+    }
+
+    .container-locais {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-local {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .missionarios-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card-missionario {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    section,
+    #requisitos,
+    .contato-dark-bg,
+    .secao-images {
+        padding: 20px 5px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-novo {
+        padding: 80px 4px 30px 4px;
+    }
+
+    .hero-titulo h1 {
+        font-size: 2.3em;
+    }
+
+    .slogan-principal {
+        font-size: 0.95em;
+    }
+
+    .btn,
+    .btn-card,
+    .btn-candidato,
+    .btn-cta-agora {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1em;
+        box-sizing: border-box;
+        margin: 12px 0;
+    }
+
+    .card-destaque {
+        padding: 10px;
+    }
+
+    .pastor-destaque {
+        padding: 10px;
+    }
+
+    .pastor-destaque img {
+        width: 140px;
+        height: 140px;
+        margin-top: 70px;
+        margin-bottom: -90px;
+    }
+
+    .pastor-destaque .subtitulo-secao {
+        margin-top: 35px;
+        margin-inline-start: 180px;
+        margin-bottom: -150px;
+    }
+
+    .footer-principal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .footer-col {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-titulo {
+        top: 200px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 95vw;
+    }
+
+    .hero-titulo h1 {
+        font-size: 2.3em !important;
+    }
+
+    .hero-novo {
+        padding: 100px 8px 30px 8px !important;
+    }
+
+    .hero-conteudo-flutuante {
+        flex-direction: column !important;
+        gap: 18px !important;
+        position: static !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+
+    .imagem-missao,
+    .card-destaque {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 350px;
+        margin: 0 auto !important;
+        height: 350px;
+    }
+
+    .btn-card {
+        padding: 20px;
+        width: 130px;
+        margin-left: 30px;
+        margin-top: -10px;
+        border-radius: 15px;
+    }
+
+    .btn-candidato,
+    .btn {
+        width: 90% !important;
+        margin: 12px auto !important;
+        display: block !important;
+        font-size: 1em !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-principal ul {
+        background: rgba(44, 22, 0, 0.95);
+        border-radius: 12px;
+        padding: 16px 0;
+        margin: 0 auto;
+        width: 95vw;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 18px !important;
+    }
+
+    .nav-principal ul li a {
+        font-size: 1.1em !important;
+        padding: 8px 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-candidato {
+        width: 80vw !important;
+        max-width: 320px;
+        margin: 10px auto 0 auto !important;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-novo {
+        background-position: center top !important;
+        background-size: cover !important;
+    }
+
+    .card-destaque {
+        max-width: 350px;
+        margin: 0 auto !important;
+        padding: 12px !important;
+    }
+
+    .card-destaque .icone-coracao {
+        padding: 10px 0 5px 3px;
+        font-size: 22px;
+    }
+    .card-destaque p {
+        padding: 6px 10px 5px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1,
+    .hero-titulo h1 {
+        font-size: 3.3em !important;
+        line-height: 1.2 !important;
+    }
+
+    section {
+        padding: 18px 4px !important;
+        margin-bottom: 18px !important;
+    }
+}
+
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 30;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .header-mobile {
+        display: flex;
+
+    }
+
+    .nav-principal {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: #FF6B00;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 20;
+        padding: 20px 0;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-principal.ativo {
+        display: flex;
+    }
+}
+
+.header-mobile {
+    display: none;
+}
+
+.logo-lateral {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-hamburguer {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    z-index: 30;
+}
+
+@media (min-width: 701px) {
+    .header-mobile {
+        display: none;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    header .logo-container>*:not(.nav-principal),
+    .btn-candidato {
+        display: none !important;
+    }
+
+    .header-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 0 16px;
+        height: 60px;
+        position: relative;
+    }
+}
