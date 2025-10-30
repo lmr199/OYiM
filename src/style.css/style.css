@@ -211,7 +211,7 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background: url('/src/images/Fundo.jpg') no-repeat center center/cover;
+    background: url('../images/Fundo.jpg') no-repeat center center/cover;
 }
 
 .hero-background-overlay {
@@ -349,7 +349,7 @@ header {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('/src/images/Fundooyimapso.jpg') center center/cover no-repeat;
+    background: url('../images/Fundooyimapso.jpg') center center/cover no-repeat;
     opacity: 0.15;
     z-index: 1;
     pointer-events: none;
@@ -1570,4 +1570,5 @@ header {
         height: 60px;
         position: relative;
     }
+
 }
